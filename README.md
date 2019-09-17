@@ -16,5 +16,5 @@ HOW TO MAKE IT WORK:
 0) Download the repository to your PC/Mac from https://github.com/simonsanvil/GetHorarioDeClases.
 1) Run the file "HorarioDeClases_app.py" in your console.
 2) Follow the instruction in the console, the first time you are going to be prompted to introduce your NIA and Aula Global password. (This info can't be viewed by the developer)
-3) When required, sign into the Google account you wish to use the app with and accept the app permissions.
+3) When required, sign into the Google account you wish to use the app with, and accept the app permissions.
 4) Wait for the program to finish running and that's it! (might take a little while)
