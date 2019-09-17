@@ -134,7 +134,7 @@ def importToGoogleCalendar():
         }
         newEvent = service.events().insert(calendarId=new_calendar['id'], body=CalendarEvent).execute()
         print('Event created: %s %s' %(newEvent['summary'],newEvent['start']['dateTime']))
-        time.sleep(0.15) #To make sure the api's user rate limit is not exceeded
+        time.sleep(0.1) #To make sure the api's user rate limit is not exceeded
     print('All events have been imported')
 
 def getEventListFromCSV():
