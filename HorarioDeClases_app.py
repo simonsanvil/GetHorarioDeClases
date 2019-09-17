@@ -10,7 +10,7 @@ if not os.path.isfile("AulaCredentials.txt"):
     print('Introduce tus credenciales de Aula Global: [NIA (100XXXXXX) y contraseña]')
     NIA = input('NIA/Numero de Estudiante/Student Number: ') # ## TODO: NUMERO DE ESTUDIANTE / USUARIO DE AULA GLOBAL
     PASS = input('Contraseña/Password: ')# #TODO
-    with open("AulaCredentials.txt") as f:
+    with open("AulaCredentials.txt", mode = 'w') as f:
         f.write(NIA + "\n")
         f.write(PASS + "\n")
 else:

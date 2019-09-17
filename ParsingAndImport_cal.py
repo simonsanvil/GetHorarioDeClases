@@ -132,7 +132,7 @@ def importToGoogleCalendar():
               'colorId':'4',
         }
         newEvent = service.events().insert(calendarId=new_calendar['id'], body=CalendarEvent).execute()
-        print('Event created: %s %s' %(newEvent['summary'],newEvent['start']))
+        print('Event created: %s %s' %(newEvent['summary'],newEvent['start']['dateTime']))
     print('All events have been imported')
 
 def getEventListFromCSV():
