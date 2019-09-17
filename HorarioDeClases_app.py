@@ -42,14 +42,14 @@ with Session() as s:
     ## HORARIO CORRESPONDIENTE AL PRIMER CUATRIMESTRE:
     calendarLink_1 = "https://aplicaciones.uc3m.es" + hrefList[2]
     cal_q1 = s.get(calendarLink_1)
-    calFile_1 = str(os.path.dirname(os.path.realpath(__file__))) + "/horarios/horario_Q1.ics"
+    calFile_1 = str(os.path.dirname(os.path.realpath(__file__))) + "/horario_Q1.ics"
     horarioCuatri_1 = open(calFile_1, 'wb').write(cal_q1.content)
     print('Horario 1er Cuat. obtained')
 
     ## HORARIO CORRESPONDIENTE AL SEGUNDO CUATRIMESTRE:
     calendarLink_2 = "https://aplicaciones.uc3m.es" + hrefList[4]
     cal_q2 = s.get(calendarLink_2)
-    calFile_2 = str(os.path.dirname(os.path.realpath(__file__))) + "/horarios/horario_Q2.ics"
+    calFile_2 = str(os.path.dirname(os.path.realpath(__file__))) + "/horario_Q2.ics"
     horarioCuatri_2 = open(calFile_2, 'wb').write(cal_q2.content)
     print('Horario 2do Cuat. obtained')
 
