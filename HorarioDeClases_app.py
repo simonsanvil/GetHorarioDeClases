@@ -3,6 +3,8 @@ import urllib
 from lxml import html
 import os
 
+os.chdir(os.path.dirname(os.path.realpath(__file__)))
+
 #UC3M url that links to the calendars webpage:
 URL = "https://aplicaciones.uc3m.es/horarios-web/alumno/alumno.page"
 #Aula Global Credentials:

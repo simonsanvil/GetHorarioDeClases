@@ -11,6 +11,7 @@ import vobject
 import csv
 import os
 import sys
+import time
 
 
 os.chdir(os.path.dirname(os.path.realpath(__file__)))
@@ -133,6 +134,7 @@ def importToGoogleCalendar():
         }
         newEvent = service.events().insert(calendarId=new_calendar['id'], body=CalendarEvent).execute()
         print('Event created: %s %s' %(newEvent['summary'],newEvent['start']['dateTime']))
+        time.sleep(0.15) #To make sure the api's user rate limit is not exceeded
     print('All events have been imported')
 
 def getEventListFromCSV():
