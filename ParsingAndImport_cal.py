@@ -24,8 +24,8 @@ def parseICS():
         csv_writer.writerow(['WHAT', 'WHERE', 'FROM', 'TO', 'DESCRIPTION','CATEGORY'])
 
         # read the data from the file
-        dataQ1 = open("horario_Q1.ics").read()
-        dataQ2 = open("horario_Q2.ics").read()
+        dataQ1 = open("horario_Q1.ics", encoding = 'utf-8').read()
+        dataQ2 = open("horario_Q2.ics", encoding = 'utf-8').read()
 
         # iterate through the contents of the .ics corresponding to the calendar of the first semester
         for cal in vobject.readComponents(dataQ1):
