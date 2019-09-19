@@ -30,9 +30,7 @@ R: La aplicacion se conecta a la cuenta de Google que autorizaste la primera vez
 
 ENG: 
 1) How to change the student account i use to get the calendar?
-
 A: To update your Aula Global credentials, delete the file "AulaCredentials.txt" from the directory where the program is located.
 
 2) How to import the calendar to another Google account?
-
 A: The application connects to the Google account you authorized the first time the app was runned, and from then on, it uses a token associated to that google account everytime you run the application again. To change the Google account associated to the app all you have to do is delete the "token.pickle" file from the directory where the program is located.
