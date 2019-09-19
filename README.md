@@ -6,8 +6,8 @@ COMO FUNCIONA:
 
 0) Descarga el repositorio a tu PC/Mac desde https://github.com/simonsanvil/GetHorarioDeClases 
 1) Corre el archivo HorarioDeClases_app.py en tu consola
-2) Sigue las instrucciones de la consola, introduce tu numero NIA y contraseña de AulaGlobal (esta informacion no puede ser vista por el desarrollador)
-3) Inicia sesion con Google cuando se requiera y acepta los permisos de la aplicacion. 
+2) Sigue las instrucciones de la consola, introduce tu numero NIA y contraseña de AulaGlobal (esta informacion se mantiene dentro de tu equipo)
+3) Inicia sesion con Google cuando se requiera y acepta los permisos de la aplicacion. Esto solo en necesario hacer la primera vez que corres el programa 
 4) Espera a que el programa acabe de correr y listo! (puede que demore un poco)
 
 ENG:
@@ -15,6 +15,22 @@ HOW TO MAKE IT WORK:
 
 0) Download the repository to your PC/Mac from https://github.com/simonsanvil/GetHorarioDeClases.
 1) Run the file "HorarioDeClases_app.py" in your console.
-2) Follow the instruction in the console, the first time you are going to be prompted to introduce your NIA and Aula Global password. (This info can't be viewed by the developer)
-3) When required, sign into the Google account you wish to use the app with, and accept the app permissions.
+2) Follow the instruction in the console, the first time you are going to be prompted to introduce your NIA and Aula Global password. (This information never leaves your machine)
+3) When required, sign into the Google account you wish to use the app with and accept the app permissions. This is only required to do one time.
 4) Wait for the program to finish running and that's it! (might take a little while)
+
+FAQ / Preguntas Frecuentes:
+
+ESP:
+1) ¿Como cambio la cuenta de estudiante que uso para obtener el horario?
+R: Para actualizar las credenciales guardadas por la aplicacion, elimina el archivo "AulaCredentials.txt" del directorio donde se encuentra el programa. 
+
+2) ¿Como importo mi horario a otra cuenta de Google? 
+R: La aplicacion se conecta a la cuenta de Google que autorizaste la primera vez que corriste el programa y utiliza un token asociado a esa cuenta siempre que vuelves a utilizar la aplicacion. Para cambiar de cuenta de google, elmina el archivo 'token.pickle' del directorio donde se encuentra la aplicacion. 
+
+ENG: 
+1) How to change the student account i use to get the calendar?
+A: To update your Aula Global credentials, delete the file "AulaCredentials.txt" from the directory where the program is located.
+
+2) How to import the calendar to another Google account?
+A: The application connects to the Google account you authorized the first time the app was runned, and from then on, it uses a token associated to that google account everytime you run the application again. To change the Google account associated to the app all you have to do is delete the "token.pickle" file from the directory where the program is located.
