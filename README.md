@@ -19,7 +19,7 @@ HOW TO MAKE IT WORK:
 3) When required, sign into the Google account you wish to use the app with and accept the app permissions. This is only required to do one time.
 4) Wait for the program to finish running and that's it! (might take a little while)
 
-Preguntas Frecuentes:
+PREGUNTAS FRECUENTES:
 1) ¿Como cambio la cuenta de estudiante que uso para obtener el horario?
 
   R: Para actualizar las credenciales guardadas por la aplicacion, elimina el archivo "AulaCredentials.txt" del directorio donde se encuentra el programa. 
