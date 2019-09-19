@@ -81,7 +81,6 @@ def getCredentials():
     def callback():
         username = USER_entry.get()
         PASS = PASS_entry.get()
-        print('user: ' + username + '\npassword: ' + PASS)
         credentialsList.append(username)
         credentialsList.append(PASS)
         root.destroy()
@@ -89,7 +88,7 @@ def getCredentials():
     SUBMIT_button = Button(root, text="Submit", width=10, command=callback) # button named submit
     SUBMIT_button.grid(row=3, column=1) # position for button
     root.mainloop()
-    return credentialsList
+    return credentialsLists
 
 def installRequirementsWithPip():
         subprocess.call([sys.executable, "-m", "pip", "install", "requirements.txt"])
