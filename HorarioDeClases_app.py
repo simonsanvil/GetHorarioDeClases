@@ -11,6 +11,7 @@ os.chdir(os.path.dirname(os.path.realpath(__file__)))
 
 def getHorarios():
     #UC3M url that links to the calendars webpage:
+    print('To obtain class calendars, UC3M Aula global credentials are required')
     URL = "https://aplicaciones.uc3m.es/horarios-web/alumno/alumno.page"
     #Aula Global Credentials:
     if not os.path.isfile("AulaCredentials.txt"): #If it's the first time the app is used we dont have their credentials
@@ -28,8 +29,6 @@ def getHorarios():
 
     #Scraping the .ics file to get the calendars:
     with Session() as s:
-
-        print('Scraping ' + URL + ' to get .ics file')
         print("Attempting to log into Aula Global")
         ##To login to Aula global using the credentials above
         site = s.get("https://login.uc3m.es/index.php/CAS/login?service=https%3A%2F%2Faulaglobal.uc3m.es%2Flogin%2Findex.php&gateway=true")
@@ -40,6 +39,7 @@ def getHorarios():
         s.post("https://login.uc3m.es/index.php/CAS/login?service=https%3A%2F%2Faulaglobal.uc3m.es%2Flogin%2Findex.php&gateway=true",login_data)
         print('Log in was succesful')
         ##To enter the horarios webpage and access all the references with links
+        print('Scraping ' + URL + ' to get .ics file')
         calendar_page = s.get(URL)
         webpage = html.fromstring(calendar_page.content)
         hrefList = webpage.xpath('//a/@href')
@@ -88,11 +88,11 @@ def getCredentials():
     SUBMIT_button = Button(root, text="Submit", width=10, command=callback) # button named submit
     SUBMIT_button.grid(row=3, column=1) # position for button
     root.mainloop()
-    return credentialsLists
+    return credentialsList
 
 def installRequirementsWithPip():
         subprocess.call([sys.executable, "-m", "pip", "install", "requirements.txt"])
 
-#installRequirementsWithPip()
+installRequirementsWithPip()
 getHorarios()
-#import ParsingAndImport_cal
+import ParsingAndImport_cal
