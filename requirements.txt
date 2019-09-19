@@ -2,5 +2,5 @@ google-auth-oauthlib
 vobject
 google-api-python-client
 lxml
-requests
 tkinter
+requests
