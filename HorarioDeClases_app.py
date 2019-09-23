@@ -8,7 +8,6 @@ from tkinter import *
 
 os.chdir(os.path.dirname(os.path.realpath(__file__)))
 
-
 def getHorarios():
     #UC3M url that links to the calendars webpage:
     print('To obtain class calendars, UC3M Aula global credentials are required')
@@ -41,6 +40,7 @@ def getHorarios():
             calendar_page = s.get(URL)
         except:
             print('There was  an issue trying to request the website. The site might be temporarilly inactive or the server doesnt respond')
+            return False
 
         webpage = html.fromstring(calendar_page.content)
         hrefList = webpage.xpath('//a/@href')
@@ -61,8 +61,10 @@ def getHorarios():
             print('Horario 1er Cuat. obtained')
             print('Horario 2do Cuat. obtained')
         except:
-            print("Failed to obtain the calendars from Aula Global. Try again and make sure your aula global username and password are correct.")
+            print("Failed to obtain the calendars from Aula Global. Try again and make sure your aula global credentials are correct.")
+            return False
 
+        return True
 
 def getCredentials():
     root = Tk()
@@ -100,5 +102,5 @@ def installRequirementsWithPip():
         subprocess.call([sys.executable, "-m", "pip", "install", "requirements.txt"])
 
 installRequirementsWithPip()
-getHorarios()
-import ParsingAndImport_cal
+if getHorarios():
+    import ParsingAndImport_cal

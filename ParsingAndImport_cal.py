@@ -13,7 +13,6 @@ import os
 import sys
 import time
 
-
 os.chdir(os.path.dirname(os.path.realpath(__file__)))
 
 def parseICS():
@@ -28,31 +27,41 @@ def parseICS():
         dataQ2 = open("horario_Q2.ics", encoding = 'utf-8').read()
 
         # iterate through the contents of the .ics corresponding to the calendar of the first semester
-        for cal in vobject.readComponents(dataQ1):
-            for component in cal.components():
-                if component.name == "VEVENT":
-                    a = 2
-                    # # write to csv
-                    csv_writer.writerow([restoreAccents(component.summary.valueRepr()) ,
-                                        restoreAccents(component.location.valueRepr()),
-                                        component.dtstart.valueRepr(),
-                                        component.dtend.valueRepr(),
-                                        restoreAccents(component.description.valueRepr()),
-                                        component.categories.valueRepr()])
-        print('Q1 .ics succesfuly parsed')
+        try:
+            for cal in vobject.readComponents(dataQ1):
+                for component in cal.components():
+                    if component.name == "VEVENT":
+                        a = 2
+                        # # write to csv
+                        csv_writer.writerow([restoreAccents(component.summary.valueRepr()) ,
+                                            restoreAccents(component.location.valueRepr()),
+                                            component.dtstart.valueRepr(),
+                                            component.dtend.valueRepr(),
+                                            restoreAccents(component.description.valueRepr()),
+                                            component.categories.valueRepr()])
+            print('Q1.ics succesfuly parsed')
+        except:
+            print("There was an error parsing horario_Q1.ics")
+            return False
         # iterate through the contents of the .ics corresponding to the calendar of the second semeste
-        for cal in vobject.readComponents(dataQ2):
-            for component in cal.components():
-                if component.name == "VEVENT":
-                    a = 2
-                    # # write to csv
-                    csv_writer.writerow([restoreAccents(component.summary.valueRepr()) ,
-                                        restoreAccents(component.location.valueRepr()),
-                                        component.dtstart.valueRepr(),
-                                        component.dtend.valueRepr(),
-                                        restoreAccents(component.description.valueRepr()),
-                                        component.categories.valueRepr()])
-        print('Q2 .ics succesfuly parsed')
+        try:
+            for cal in vobject.readComponents(dataQ2):
+                for component in cal.components():
+                    if component.name == "VEVENT":
+                        a = 2
+                        # # write to csv
+                        csv_writer.writerow([restoreAccents(component.summary.valueRepr()) ,
+                                            restoreAccents(component.location.valueRepr()),
+                                            component.dtstart.valueRepr(),
+                                            component.dtend.valueRepr(),
+                                            restoreAccents(component.description.valueRepr()),
+                                            component.categories.valueRepr()])
+            print('Q2.ics succesfuly parsed')
+        except:
+            print("There was an error parsing horario_Q2.ics")
+            return False
+
+        return True
 
 #Google Calendar API Integration:
 SCOPES = ['https://www.googleapis.com/auth/calendar']
@@ -172,5 +181,5 @@ def getYearInterval():
         YearInterval = str(now.year) + '/' + str(now.year+1)
     return YearInterval
 
-parseICS()
-importToGoogleCalendar()
+if parseICS():
+    importToGoogleCalendar()
