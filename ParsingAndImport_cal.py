@@ -130,7 +130,7 @@ def importToGoogleCalendar():
                   {'method': 'popup', 'minutes': 20},
                   ],
               },
-              'colorId':'4',
+              #'colorId':'4', #TO SET A DEFAULT COLOR FOR THE CALENDAR EVENTS AS CAN BE SSEN IN https://developers.google.com/calendar/v3/reference/colors
         }
         newEvent = service.events().insert(calendarId=new_calendar['id'], body=CalendarEvent).execute()
         print('Event created: %s %s' %(newEvent['summary'],newEvent['start']['dateTime']))
