@@ -99,6 +99,6 @@ def getCredentials():
 def installRequirementsWithPip():
         subprocess.call([sys.executable, "-m", "pip", "install", "requirements.txt"])
 
-#installRequirementsWithPip()
+installRequirementsWithPip()
 getHorarios()
-#import ParsingAndImport_cal
+import ParsingAndImport_cal
