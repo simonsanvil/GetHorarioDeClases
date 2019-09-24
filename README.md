@@ -14,6 +14,7 @@ Download your classes schedule from Aula Global and import it to a new Google Ca
 ### Instalacion
 
 Requiere python>=3.5
+
 Usa:
 ```
 $ pip install -r requirements.txt
@@ -42,6 +43,7 @@ Para instalar todas las dependencias del proyecto.
 ### Install
 
 Requires python>=3.5
+
 Use:
 ```
 $ pip install -r requirements.txt
