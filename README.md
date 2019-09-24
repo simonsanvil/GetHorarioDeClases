@@ -33,11 +33,11 @@ Para instalar todas las dependencias del proyecto.
 ### Preguntas frecuentes
 1. ¿Como cambio la cuenta de estudiante que uso para obtener el horario?
 
-  - R: Para actualizar las credenciales guardadas por la aplicacion, elimina el archivo "AulaCredentials.txt" del directorio donde se encuentra el programa. 
+    - R: Para actualizar las credenciales guardadas por la aplicacion, elimina el archivo "AulaCredentials.txt" del directorio donde se encuentra el programa. 
 
 2. ¿Como importo mi horario a otra cuenta de Google? 
 
-  - R: La aplicacion se conecta a la cuenta de Google que autorizaste la primera vez que corriste el programa y utiliza un token asociado a esa cuenta siempre que vuelves a utilizar la aplicacion. Para cambiar de cuenta de google, elmina el archivo 'token.pickle' del directorio donde se encuentra la aplicacion. 
+    - R: La aplicacion se conecta a la cuenta de Google que autorizaste la primera vez que corriste el programa y utiliza un token asociado a esa cuenta siempre que vuelves a utilizar la aplicacion. Para cambiar de cuenta de google, elmina el archivo 'token.pickle' del directorio donde se encuentra la aplicacion. 
   
 ## Instructions (English)
 
@@ -65,8 +65,8 @@ To install all the dependancies on your project.
 
 1. How to change the student account i use to get the calendar?
 
-  - A: To update your Aula Global credentials, delete the file "AulaCredentials.txt" from the directory where the program is located.
+   - A: To update your Aula Global credentials, delete the file "AulaCredentials.txt" from the directory where the program is located.
 
 2. How to import the calendar to another Google account?
 
-  - A: The application connects to the Google account you authorized the first time the app was runned, and from then on, it uses a token associated to that google account everytime you run the application again. To change the Google account associated to the app all you have to do is delete the "token.pickle" file from the directory where the program is located.
+   - A: The application connects to the Google account you authorized the first time the app was runned, and from then on, it uses a token associated to that google account everytime you run the application again. To change the Google account associated to the app all you have to do is delete the "token.pickle" file from the directory where the program is located.
