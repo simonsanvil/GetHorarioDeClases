@@ -15,7 +15,9 @@ Download your classes schedule from Aula Global and import it to a new Google Ca
 
 Requiere python>=3.5
 
-Usa:
+Descarga el repositorio en tu PC/Mac desde https://github.com/simonsanvil/GetHorarioDeClases 
+
+Luego usa:
 ```
 $ pip install -r requirements.txt
 ```
@@ -23,7 +25,6 @@ Para instalar todas las dependencias del proyecto.
 
 ### Instrucciones
 
-0) Descarga el repositorio a tu PC/Mac desde https://github.com/simonsanvil/GetHorarioDeClases 
 1) Corre el archivo HorarioDeClases_app.py en tu consola `python HorarioDeClases_app.py`
 2) Sigue las instrucciones de la consola, introduce tu numero NIA y contraseña de AulaGlobal (esta informacion se mantiene dentro de tu equipo)
 3) Inicia sesion con Google cuando se requiera y acepta los permisos de la aplicacion. Esto solo en necesario hacer la primera vez que corres el programa 
@@ -44,7 +45,9 @@ Para instalar todas las dependencias del proyecto.
 
 Requires python>=3.5
 
-Use:
+Download the repository on your PC/Mac from https://github.com/simonsanvil/GetHorarioDeClases.
+
+Then use:
 ```
 $ pip install -r requirements.txt
 ```
@@ -52,7 +55,6 @@ To install all the dependancies on your project.
 
 ### Use
 
-0) Download the repository to your PC/Mac from https://github.com/simonsanvil/GetHorarioDeClases.
 1) Run the file "HorarioDeClases_app.py" in your console.
 2) Follow the instruction in the console, the first time you are going to be prompted to introduce your NIA and Aula Global password. (This information never leaves your machine)
 3) When required, sign into the Google account you wish to use the app with and accept the app permissions. This is only required to do one time.
