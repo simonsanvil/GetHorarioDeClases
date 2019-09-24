@@ -3,8 +3,8 @@
 
 Download your classes schedule from Aula Global and import it to a new Google Calendar using your account.
 
-[Instrucciones en Español]()
-[English Instructions]()
+[Instrucciones en Español](https://github.com/Josersanvil/GetHorarioDeClases/blob/master/README.md#instrucciones-español)
+[English Instructions](https://github.com/Josersanvil/GetHorarioDeClases/blob/master/README.md#instruccions-english)
 
 ## Instrucciones (Español)
 
@@ -34,7 +34,7 @@ Para instalar todas las dependencias del proyecto.
 
   R: La aplicacion se conecta a la cuenta de Google que autorizaste la primera vez que corriste el programa y utiliza un token asociado a esa cuenta siempre que vuelves a utilizar la aplicacion. Para cambiar de cuenta de google, elmina el archivo 'token.pickle' del directorio donde se encuentra la aplicacion. 
   
-## Instruccions (English)
+## Instructions (English)
 
 ### Install
 
