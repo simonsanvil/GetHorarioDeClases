@@ -3,8 +3,11 @@
 
 Download your classes schedule from Aula Global and import it to a new Google Calendar using your account.
 
+Section Shortcuts:
+
 [Instrucciones en Español](https://github.com/Josersanvil/GetHorarioDeClases/blob/master/README.md#instrucciones-español)
-[English Instructions](https://github.com/Josersanvil/GetHorarioDeClases/blob/master/README.md#instruccions-english)
+
+[English Instructions](https://github.com/Josersanvil/GetHorarioDeClases/blob/master/README.md#instructions-english)
 
 ## Instrucciones (Español)
 
