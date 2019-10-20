@@ -25,10 +25,10 @@ Para instalar todas las dependencias del proyecto.
 
 ### Instrucciones
 
-1. Corre el archivo HorarioDeClases_app.py en tu consola `python HorarioDeClases_app.py`
+1. Ejecuta el script HorarioDeClases_app.py en tu consola `python HorarioDeClases_app.py`
 2. Sigue las instrucciones de la consola, introduce tu numero NIA y contraseña de AulaGlobal (esta informacion se mantiene dentro de tu equipo)
 3. Inicia sesion con Google cuando se requiera y acepta los permisos de la aplicacion. Esto solo en necesario hacer la primera vez que corres el programa 
-4. Espera a que el programa acabe de correr y listo! (puede que demore un poco)
+4. Espera a que el programa acabe de ejecutarse y listo! (puede que demore un poco)
 
 ### Preguntas frecuentes
 1. ¿Como cambio la cuenta de estudiante que uso para obtener el horario?
