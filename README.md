@@ -25,7 +25,7 @@ Para instalar todas las dependencias del proyecto.
 
 ### Instrucciones
 
-1. Corre el archivo HorarioDeClases_app.py en tu consola `python HorarioDeClases_app.py`
+1. Ejecuta el archivo HorarioDeClases_app.py en tu consola `python HorarioDeClases_app.py`
 2. Sigue las instrucciones de la consola, introduce tu numero NIA y contraseña de AulaGlobal (esta informacion se mantiene dentro de tu equipo)
 3. Inicia sesion con Google cuando se requiera y acepta los permisos de la aplicacion. Esto solo en necesario hacer la primera vez que corres el programa 
 4. Espera a que el programa acabe de correr y listo! (puede que demore un poco)
@@ -37,7 +37,7 @@ Para instalar todas las dependencias del proyecto.
 
 2. ¿Como importo mi horario a otra cuenta de Google? 
 
-    - R: La aplicacion se conecta a la cuenta de Google que autorizaste la primera vez que corriste el programa y utiliza un token asociado a esa cuenta siempre que vuelves a utilizar la aplicacion. Para cambiar de cuenta de google, elmina el archivo 'token.pickle' del directorio donde se encuentra la aplicacion. 
+    - R: La aplicacion se conecta a la cuenta de Google que autorizaste la primera vez que corriste el programa y utiliza un token asociado a esa cuenta siempre que vuelves a utilizar la aplicacion. Para cambiar de cuenta de google, elimina el archivo 'token.pickle' del directorio donde se encuentra la aplicacion. 
   
 ## Instructions (English)
 
