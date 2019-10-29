@@ -114,11 +114,12 @@ def importToGoogleCalendar():
             'timeZone': 'Europe/Madrid'
     }
     new_calendar = service.calendars().insert(body=calendar).execute()
-    print("calendar '" + newCalendarName + "' created")
+    print("calendar '" + newCalendarName + "' created\n")
     #IMPORT ALL THE EVENTS FROM CSV TO GOOGLE CALENDAR...
-    print('Importing events to new calendar. This might take a while...')
+    print('Importing all class events to new calendar. This might take a while...\n')
     eventList = getEventListFromCSV()
-    for event in eventList:
+    counter = temp_summary = 1 #Initialize counter and temp variables
+    for event in eventList: #To add all events to new calendar
         startTime = d = datetime.datetime.strptime(event[2],'%Y-%m-%d %H:%M:%S').strftime('%Y-%m-%dT%H:%M:%S+02:00')
         endTime = d = datetime.datetime.strptime(event[3],'%Y-%m-%d %H:%M:%S').strftime('%Y-%m-%dT%H:%M:%S+02:00')
         CalendarEvent = {
@@ -141,10 +142,15 @@ def importToGoogleCalendar():
               },
               #'colorId':'4', #TO SET A DEFAULT COLOR FOR THE CALENDAR EVENTS AS CAN BE SSEN IN https://developers.google.com/calendar/v3/reference/colors
         }
+        if(CalendarEvent['summary'] != temp_summary):
+            s = 'Events created: %s' %(CalendarEvent['summary'])
+            filler = ''.join([' ' for char in range(0,len(str(temp_summary)) - len(s))])
         newEvent = service.events().insert(calendarId=new_calendar['id'], body=CalendarEvent).execute()
-        print('Event created: %s %s' %(newEvent['summary'],newEvent['start']['dateTime']))
+        print(str(counter) + '/' + str(len(eventList)) + ' ' + s + filler, end = '\r')
+        temp_summary = s
+        counter += 1
         time.sleep(0.1) #To make sure the api's user rate limit is not exceeded
-    print('All events have been imported')
+    print('\nAll %s events have been imported'%str(len(eventList) ) )
 
 def getEventListFromCSV():
     """
