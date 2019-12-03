@@ -13,6 +13,7 @@ import os
 import sys
 import time
 
+
 os.chdir(os.path.dirname(os.path.realpath(__file__)))
 
 def parseICS():
@@ -114,14 +115,15 @@ def importToGoogleCalendar():
             'timeZone': 'Europe/Madrid'
     }
     new_calendar = service.calendars().insert(body=calendar).execute()
-    print("calendar '" + newCalendarName + "' created\n")
+    print("calendar '" + newCalendarName + "' created")
     #IMPORT ALL THE EVENTS FROM CSV TO GOOGLE CALENDAR...
-    print('Importing all class events to new calendar. This might take a while...\n')
+    print('Importing events to new calendar. This might take a while...')
     eventList = getEventListFromCSV()
-    counter = temp_summary = 1 #Initialize counter and temp variables
-    for event in eventList: #To add all events to new calendar
-        startTime = d = datetime.datetime.strptime(event[2],'%Y-%m-%d %H:%M:%S').strftime('%Y-%m-%dT%H:%M:%S+02:00')
-        endTime = d = datetime.datetime.strptime(event[3],'%Y-%m-%d %H:%M:%S').strftime('%Y-%m-%dT%H:%M:%S+02:00')
+    offset = (datetime.datetime.now() - datetime.datetime.utcnow()).seconds/3600
+    ftime = '%Y-%m-%dT%H:%M:%S+' + str(int(offset)).zfill(2) + ':00'
+    for event in eventList:
+        startTime = d = datetime.datetime.strptime(event[2],'%Y-%m-%d %H:%M:%S').strftime(ftime)
+        endTime = d = datetime.datetime.strptime(event[3],'%Y-%m-%d %H:%M:%S').strftime(ftime)
         CalendarEvent = {
               'summary': event[0],
               'location': event[1],
@@ -140,17 +142,12 @@ def importToGoogleCalendar():
                   {'method': 'popup', 'minutes': 20},
                   ],
               },
-              #'colorId':'4', #TO SET A DEFAULT COLOR FOR THE CALENDAR EVENTS AS CAN BE SSEN IN https://developers.google.com/calendar/v3/reference/colors
+              #'colorId':'4',
         }
-        if(CalendarEvent['summary'] != temp_summary):
-            s = 'Events created: %s' %(CalendarEvent['summary'])
-            filler = ''.join([' ' for char in range(0,len(str(temp_summary)) - len(s))])
         newEvent = service.events().insert(calendarId=new_calendar['id'], body=CalendarEvent).execute()
-        print(str(counter) + '/' + str(len(eventList)) + ' ' + s + filler, end = '\r')
-        temp_summary = s
-        counter += 1
-        time.sleep(0.1) #To make sure the api's user rate limit is not exceeded
-    print('\nAll %s events have been imported'%str(len(eventList) ) )
+        print('Event created: %s %s' %(newEvent['summary'],newEvent['start']['dateTime']))
+        time.sleep(0.15) #To make sure the api's user rate limit is not exceeded
+    print('All events have been imported')
 
 def getEventListFromCSV():
     """
