@@ -1,7 +1,7 @@
 # GetHorarioDeClases
 (Para estudiantes de la UC3M) Aplicacion que te descarga el horario de clases directamente desde aula global y lo importa a un nuevo calendario de Google
 
-Download your classes schedule from Aula Global and import it to a new Google Calendar using your account.
+Download your UC3M class schedule from Aula Global and import it to a new Google Calendar.
 
 **Section Shortcuts**:
 
