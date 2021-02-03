@@ -1,3 +1,5 @@
+temp/
+Calendars/
 AulaCredentials.txt
 events.csv
 token.pickle
@@ -5,5 +7,5 @@ horario_Q1.ics
 horario_Q2.ics
 README.md
 ParsingAndImport_cal.cpython-37.pyc
-HorarioDeClases_app.cpython-37.pyc
-Builds\
+*.dat
+credentials.JSON
