@@ -5,10 +5,10 @@ ESP:
 COMO FUNCIONA:
 
 0) Descarga el repositorio a tu PC/Mac desde https://github.com/simonsanvil/GetHorarioDeClases 
-1) Corre el archivo HorarioDeClases_app.py en tu consola
+1) Ejecuta el archivo getHorario.py en tu consola
 2) Sigue las instrucciones de la consola, introduce tu numero NIA y contraseña de AulaGlobal (esta informacion no puede ser vista por el desarrollador)
 3) Inicia sesion con Google cuando se requiera y acepta los permisos de la aplicacion. 
-4) Espera a que el programa acabe de correr y listo! (puede que demore un poco)
+4) Espera a que el programa acabe de ejecutarse (puede que demore un poco) y listo! 
 
 ENG:
 HOW TO MAKE IT WORK:
